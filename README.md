@@ -4,6 +4,14 @@ A Linux script used for obtaining useful information from the BWF website (https
 
 Examples of usage:
 
+IMPORTANT:
+
+Search by country is not very polished. Searching by country is different for singles and doubles:
+
+For men's and women's SINGLES search using COUNTRY CODE IS NOT SUPPORTED. Use full country name.
+
+For DOUBLES (md, wd, xd) search using FULL COUNTRY NAME IS NOT SUPPORTED. Use custom country codes by the BWF.
+
 RANKING
 
 ./bwf.sh r                        displays the top 69 players in the men's singles category on the leaderboards
@@ -22,6 +30,10 @@ RANKING
 
 ./bwf.sh -s '222' -c xd r         searches for the duo with rank number 222 in mixed doubles category
 
+./bwf.sh -s 'japan' r             searches the top 69 postitions of the leaderboard in men's singles for players from Japan
+
+./bwf.sh -s 'usa' -c md -n 200 r  searches the top 200 positions in men's doubles for players from the US
+
 ./bwf.sh -d 'last Wednesday' r    shows the top 69 players in the men's singles category for last Wednesday
 
 ./bwf.sh -d '20180415' -c md r    shows the top 69 duos in men's doubles for the week of 2018 April 15
@@ -32,9 +44,13 @@ TOURNAMENTS
        
 ./bwf.sh -d '20180516' t          shows all tournaments from the week of 2018 May 16 until the end of 2018
 
-./bwf.sh -f -d '20190201' t       shows all completed tournaments from the week of 2019 February up until the current week
+./bwf.sh -f -d '20190201' t       shows all completed tournaments from the week of 2019 February 01 up until the current week
 
-
+./bwf.sh -s 'total bwf' -d '20180101' t   searches for all tournaments of 2018 which have "total bwf" in their name
+                                          in this case the result is
+                                          
+                                          20      20-27   TOTAL BWF Thomas & Uber Cup Finals 2018
+                                          31      30-05   TOTAL BWF World Championships 2018
 
 
 
