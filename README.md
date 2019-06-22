@@ -61,8 +61,7 @@ TOURNAMENTS
 ./bwf.sh -d '20190301' -a t        shows all completed tournaments since 2019 March 01 and upcoming tournaments (until the end of 2019)
 
 
-bwf.sh -h
-
+bwf.sh -h     displays the following help:
 
 Usage: bwf.sh...[options]...[COMMAND]
 
