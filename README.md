@@ -54,6 +54,11 @@ TOURNAMENTS
                                           20      20-27   TOTAL BWF Thomas & Uber Cup Finals 2018
                                           31      30-05   TOTAL BWF World Championships 2018
 
+./bwf.sh -s '20180701' t           shows all tournaments that took place during the week containing the date 2018 July 01
+
+./bwf.sh -d '20190301' t           this will only show upcoming tournaments. To see all tournaments from March until now, use option -a
+
+./bwf.sh -d '20190301' -a t        shows all completed tournaments since 2019 March 01 and upcoming tournaments (until the end of 2019)
 
 
 bwf.sh -h
