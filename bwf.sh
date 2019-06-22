@@ -12,7 +12,7 @@ usage() {
         echo "COMMANDS:
 'r' or 'ranking'        show this week's top 69 players
 Options:
-        -c CATEGORY             show ranking for given category. By default shows results for men's singles (ms)
+        -c CATEGORY             show ranking for given category
         CATEGORY format:        \"ms\" or \"men's singles\"
                                 \"ws\" or \"women's singles\"
                                 \"md\" or \"men's doubles\"
@@ -53,12 +53,12 @@ GetYnW() {
         # Get year and week number from the given string #
         year=$( date -d "$1" +%Y 2>/dev/null)
         # Check if the date string format is valid #
-        if [ $? -eq 1 ] && [ $search -eq 0 ]; then # do not exit if this function was called from toursearch #
+        if [ $? -eq 1 ] && [ $search -eq 0 ]; then # do not exit if this function was called with a -s option #
                 echo "Invalid date: \"${1}\"" >&2
                 echo "See manual page of 'date' command for date string info" >&2
                 exit 42
         else
-                if [ $year -lt $( date +%Y ) ]; then
+                if [ -n "$year" ] && [ $year -lt $( date +%Y ) ]; then
                         type=all
                 fi
         fi
@@ -168,9 +168,13 @@ toursearch() {
         tournaments > searchThis
         GetYnW "$searchString"
         if [ $? -eq 1 ]; then
+                echo "Week      Date    Name of tournament"
+                echo "------------------------------------"
                 grep -i "$searchString" searchThis
         else
-                grep "$weekNumber" searchThis
+                echo "Week      Date    Name of tournament"
+                echo "------------------------------------"
+                awk -v "week=$weekNumber" '{ if ((NR > 2) && ($1 == week)) { print $0 } }' searchThis
         fi
 }
 
@@ -231,7 +235,7 @@ case "$1" in
         t | tournaments)        if [ "$search" -eq 1 ]; then
                                         GetYnW $searchString
                                         if [ -z "$year" ]; then
-                                                getYnW $dateString
+                                                GetYnW $dateString
                                         fi
                                         command=toursearch
                                 else
