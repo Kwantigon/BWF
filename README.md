@@ -4,11 +4,20 @@ A Linux script used for obtaining useful information from the BWF website (https
 
 Examples of usage:
 bwf.sh r                        this will display the top 69 players in the men's singles category on the leaderboards
+
+bwf.sh ranking                  this will do the same as the example above
+
 bwf.sh -c wd r                  this will display the top 69 duos in the women's doubles category on the leaderboards
-bwf.sh -c ws -n 123             this will display the top 123 players in the women's singles category on the leaderboards
-bwf.sh -s 'My Name'             this will search for a player named 'My Name' in the top 69 positions
-bwf.sh -s 'My Name' -n 300      this will search for a player named 'My Name' in the top 300 positions
-bwf.sh -s '291'                 this will search for the player with rank number 291
+
+bwf.sh -c ws -n 123 r           this will display the top 123 players in the women's singles category on the leaderboards
+
+bwf.sh -s 'My Name' r           this will search for a player named 'My Name' in the top 69 positions
+
+bwf.sh -s 'My Name' -n 300 r    this will search for a player named 'My Name' in the top 300 positions
+
+bwf.sh -s '291' r               this will search for the player with rank number 291
+
+bwf.sh -s '222' -c xd r         this will search for the duo with rank number 222 in mixed doubles category
 
 Usage: bwf.sh...[options]...[COMMAND]
 
