@@ -3,6 +3,7 @@ Repository for the bwf.sh script
 A Linux script used for obtaining useful information from the BWF website (https://bwfbadminton.com/)
 
 Examples of usage:
+
 bwf.sh r                        this will display the top 69 players in the men's singles category on the leaderboards
 
 bwf.sh ranking                  this will do the same as the example above
