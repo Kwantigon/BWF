@@ -12,7 +12,7 @@ usage() {
         echo "COMMANDS:
 'r' or 'ranking'        show this week's top 69 players
 Options:
-        -c CATEGORY             show ranking for given category
+        -c CATEGORY             show ranking for given category. By default shows results for men's singles (ms)
         CATEGORY format:        \"ms\" or \"men's singles\"
                                 \"ws\" or \"women's singles\"
                                 \"md\" or \"men's doubles\"
