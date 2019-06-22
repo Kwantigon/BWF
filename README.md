@@ -49,6 +49,8 @@ TOURNAMENTS
 ./bwf.sh -s 'total bwf' -d '20180101' t   searches for all tournaments of 2018 which have "total bwf" in their name
                                           in this case the result is
                                           
+                                          Week    Date    Name of tournament
+                                          ------------------------------------
                                           20      20-27   TOTAL BWF Thomas & Uber Cup Finals 2018
                                           31      30-05   TOTAL BWF World Championships 2018
 
