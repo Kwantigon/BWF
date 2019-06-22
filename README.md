@@ -12,6 +12,7 @@ bwf.sh retrieves this week's BWF ranking or upcoming tournaments
 COMMANDS:
 'r' or 'ranking'        show this week's top 69 players
 Options:
+
         -c CATEGORY             show ranking for given category
         CATEGORY format:        "ms" or "men's singles"
                                 "ws" or "women's singles"
@@ -30,6 +31,7 @@ Options:
 
 't' or 'tournaments'    show this year's upcoming tournaments
 Options:
+
         -f                      show only completed tournaments
 
         -a                      show both completed and upcoming tournaments
@@ -44,6 +46,7 @@ Options:
                                 which took place (or will take place)
                                 during the week given in SEARCH STRING
 Other non-COMMAND related options:
+
         -v                      display debug output
 
         -h                      display this help and exit
