@@ -9,8 +9,10 @@ bwf.sh r
 
 Usage: bwf.sh...[options]...[COMMAND]
 bwf.sh retrieves this week's BWF ranking or upcoming tournaments
+
 COMMANDS:
 'r' or 'ranking'        show this week's top 69 players
+
 Options:
 
         -c CATEGORY             show ranking for given category
